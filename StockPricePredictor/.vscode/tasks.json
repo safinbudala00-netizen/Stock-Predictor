@@ -1,0 +1,39 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Stock Price Predictor GUI",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "main.cpp",
+                "CSVHandler.cpp",
+                "LinearRegression.cpp",
+                "MovingAverage.cpp",
+                "Portfolio.cpp",
+                "Stock.cpp",
+                "StockManager.cpp",
+                "StockGUI.cpp",
+                "-mwindows",
+                "-lgdiplus",
+                "-ldwmapi",
+                "-o",
+                "StockPricePredictor.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiles the classy GUI Stock Price Predictor application."
+        }
+    ],
+    "version": "2.0.0"
+}
